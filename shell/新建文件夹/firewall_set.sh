@@ -7,7 +7,7 @@
 
 ##################################依赖##################################
 function get_sys() {
-    if grep -Eqi "CentOS" /etc/issue || grep -Eq "CentOS" /etc/*-release; then
+    if grep -Eqii "CentOS" /etc/issue || grep -Eq "CentOS" /etc/*-release; then
         DISTRO='CentOS'
     elif grep -Eqi "Red Hat Enterprise Linux Server" /etc/issue || grep -Eq "Red Hat Enterprise Linux Server" /etc/*-release; then
         DISTRO='RHEL'
@@ -60,4 +60,4 @@ function firewall_set() {
     fi
 }
 
-firewall_set "$@"
+f

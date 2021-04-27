@@ -5,7 +5,6 @@
 # Depend:       NULL
 #
 
-
 cfssl_install() {
     if ! which cfssl; then
         local down_file=(

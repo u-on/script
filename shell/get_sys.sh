@@ -5,7 +5,6 @@
 # Depend:       NULL
 #
 
-
 function get_sys() {
     if grep -Eqi "CentOS" /etc/issue || grep -Eq "CentOS" /etc/*-release; then
         DISTRO='CentOS'

@@ -1,7 +1,6 @@
 #!/bin/bash
 # 配置安装参数
 
-
 while
     getopts :hv: varname
 do
