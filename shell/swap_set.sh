@@ -54,12 +54,12 @@ EOF
         echo -e "${dis}"
         ;;
 
-    :)                                                  #当选项后面没有参数时，OPT的值被设置为（：），OPTARG的值被设置为选项本身
+    :)       #当选项后面没有参数时，OPT的值被设置为（：），OPTARG的值被设置为选项本身
         echo "the option -$OPTARG require an arguement" #提示用户此选项后面需要一个参数
         exit 1
         ;;
 
-    ?)                                  #当选项不匹配时，OPT的值被设置为（？），OPTARG的值被设置为选项本身
+    ?)       #当选项不匹配时，OPT的值被设置为（？），OPTARG的值被设置为选项本身
         echo "Invaild option: -$OPTARG" #提示用户此选项无效
         echo "-v <kernel version> "
         exit 2
