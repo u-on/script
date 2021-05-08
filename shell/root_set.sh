@@ -15,8 +15,8 @@ RootUserOpen() {
     sed -ri 's/^StrictModes.*/#&/g' /etc/ssh/sshd_config
     grep -Eqi "^#PermitRootLogin.*" /etc/ssh/sshd_config
     tmp_fh=$?
-    [[ $tmp_fh == 0 ]] && echo -e "\e[1;32mROOT账户启用成功[Root account enabled successfully]\e[0m"
-    [[ $tmp_fh == 0 ]] || echo -e "\e[1;31mROOT账户启用失败[Failed to enable root account]\e[0m"
+    [[ $tmp_fh == 0 ]] && echo -e "\e[1;32mROOT账户启用成功 [Root account enabled successfully]\e[0m"
+    [[ $tmp_fh == 0 ]] || echo -e "\e[1;31mROOT账户启用失败 [Failed to enable root account]\e[0m"
     systemctl restart sshd
 }
 
@@ -26,8 +26,8 @@ RootUserClose() {
     sed -ri 's/^#(StrictModes).*/\1 yes/g' /etc/ssh/sshd_config
     grep -Eqi "^PermitRootLogin.*yes" /etc/ssh/sshd_config
     tmp_fh=$?
-    [[ $tmp_fh == 0 ]] && echo -e "\e[1;32mROOT账户禁用成功[Root account disabled successfully]\e[0m"
-    [[ $tmp_fh == 0 ]] || echo -e "\e[1;31mROOT账户禁用失败[Root account disable failed]\e[0m"
+    [[ $tmp_fh == 0 ]] && echo -e "\e[1;32mROOT账户禁用成功 [Root account disabled successfully]\e[0m"
+    [[ $tmp_fh == 0 ]] || echo -e "\e[1;31mROOT账户禁用失败 [Root account disable failed]\e[0m"
     systemctl restart sshd
 }
 

@@ -30,5 +30,5 @@ function axel_install() {
 if ! which axel 2>/dev/null; then
     axel_install
 else
-    echo axel已经存在
+    echo axel已经存在 [Axel already exists]
 fi
